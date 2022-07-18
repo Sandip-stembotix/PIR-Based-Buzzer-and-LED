@@ -1,0 +1,20 @@
+// C++ code
+//
+void setup()
+{
+  pinMode(5, INPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop()
+{
+  digitalRead(5);
+
+  if (digitalRead(5) == HIGH) {
+    digitalWrite(3, HIGH);
+    tone(4, 5274, 1000); // play tone 100 (E8 = 5274 Hz)
+  }
+  digitalWrite(3, LOW);
+  delay(10); // Delay a little bit to improve simulation performance
+}
